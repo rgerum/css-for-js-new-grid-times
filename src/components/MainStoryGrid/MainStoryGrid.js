@@ -128,6 +128,7 @@ const AdvertisementSection = styled.section`
         border-top: 1px solid var(--color-gray-300);
         padding-top: 24px;
         margin-top: 24px;
+        margin-bottom: 6px;
     }
 `;
 
