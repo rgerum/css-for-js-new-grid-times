@@ -63,9 +63,18 @@ const SecondaryStorySection = styled.section`
   grid-area: secondary-stories;
 `;
 
+//& a, & ${SecondaryStory}:not(:last-child), & ${OpinionStory}:not(:last-child) {
 const StoryList = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+    
+  & a:not(:last-child):after {
+      content: '';
+      display: block;
+      height: 16px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--color-gray-300);
+  }  
 `;
 
 const OpinionSection = styled.section`
