@@ -4,7 +4,7 @@ import {QUERIES} from "../../constants";
 
 const OpinionStory = ({ id, title, author, avatar }) => {
   return (
-    <a href={`/story/${id}`}>
+    <LinkWrapper href={`/story/${id}`}>
       <Wrapper>
         <Avatar alt="" src={avatar} />
         <div>
@@ -12,9 +12,15 @@ const OpinionStory = ({ id, title, author, avatar }) => {
           <ArticleTitle>{title}</ArticleTitle>
         </div>
       </Wrapper>
-    </a>
+    </LinkWrapper>
   );
 };
+
+const LinkWrapper = styled.a`
+    @media ${QUERIES.tabletOnly} {
+    flex: 1;
+}
+`
 
 const Wrapper = styled.article`
   color: var(--color-gray-900);
